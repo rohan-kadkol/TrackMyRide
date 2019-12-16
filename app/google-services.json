@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "739675645463",
+    "firebase_url": "https://trackmyride-ce197.firebaseio.com",
+    "project_id": "trackmyride-ce197",
+    "storage_bucket": "trackmyride-ce197.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739675645463:android:d7da40b51fc2ab700fde52",
+        "android_client_info": {
+          "package_name": "com.rohan.trackmyrideversion0"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739675645463-ghhuko6v67qvueok18obilfmlr866k9v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rohan.trackmyrideversion0",
+            "certificate_hash": "bc64b33289266dd573b024bcfecd486899840c55"
+          }
+        },
+        {
+          "client_id": "739675645463-j3r2d92g7muo6o6kebgkl1al0ovf72pj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbdBncovqBM56gi5kDWEFHhLSfFB6RZzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739675645463-j3r2d92g7muo6o6kebgkl1al0ovf72pj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

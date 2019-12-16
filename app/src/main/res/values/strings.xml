@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">TrackMyRide</string>
+    <string name="notification_title">Ride in progress (Broadcasting location to riders)</string>
+    <string name="notification_text">Tap to end ride</string>
+    <string name="transport_id" translatable="false">123</string>
+    <string name="firebase_path" translatable="false">locations</string>
+    <string name="firebase_email" translatable="false">rohankd100@gmail.com</string>
+    <string name="firebase_password" translatable="false">testing</string>
+    <string name="title_activity_display">Map</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_send_location">Broadcast Location</string>
+    <string name="title_track_location">Track Others</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start_broadcasting_location">Start broadcasting</string>
+    <string name="stop_broadcasting_location">Stop Broadcasting</string>
+    <string name="broadcasting_true">Broadcasting your location!</string>
+    <string name="broadcasting_false">Press the button to broadcast your location</string>
+    <string name="title_activity_login">Sign in/Sign up</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="error_enter_email_password">Please enter an email and password</string>
+    <string name="error_enter_email">Please enter an email</string>
+    <string name="error_enter_password">Please enter a password</string>
+    <string name="signed_in">Signed in!</string>
+    <string name="error_enter_stronger_password">Please enter a stronger password</string>
+    <string name="registered">Registered!</string>
+    <string name="error_enter_valid_email">Please enter a valid email</string>
+    <string name="error_user_already_exists">Account already exists</string>
+    <string name="error_registration">Error registering user</string>
+    <string name="error_incorrect_password">Incorrect password</string>
+    <string name="create_ride">Create a ride</string>
+    <string name="subscribe_to_a_ride">Subscribe to a ride</string>
+    <string name="rider_id_instructions">Riders can join the ride using this id</string>
+    <string name="rearrange_drivers">Rearrange drivers</string>
+    <string name="get_directions">Get directions</string>
+    <string name="pick_up_">Pick up:</string>
+    <string name="drop_">Drop:</string>
+    <string name="pick_up">Pick up</string>
+    <string name="drop">Drop</string>
+    <string name="ride_code">ride_code</string>
+    <string name="prompt_ride_code_driver">What ride code you want to give your ride?</string>
+    <string name="prompt_ride_code_rider">Enter the ride code of the ride you want to join</string>
+    <string name="error_ride_code_not_unique">Sorry, ride code in use. Please try another ride code.</string>
+    <string name="ride_code_with_string">Ride code: %s</string>
+    <string name="is_driver">is-driver</string>
+    <string name="error_invalid_ride_code">Sorry, the ride code you entered doesn\'t exist</string>
+    <string name="name">Name</string>
+    <string name="origin">Origin</string>
+    <string name="destination">Destination</string>
+    <string name="pick">Pick</string>
+    <string name="subscribe_to_ride">Subscribe to ride</string>
+    <string name="error_enter_name">Please enter a name</string>
+    <string name="error_origin">Please pick an origin</string>
+    <string name="error_destination">Please pick a destination</string>
+    <string name="error_location_permission">Sorry, location permission needed to create a ride</string>
+    <string name="end_ride_success">Ride ended!</string>
+    <string name="riders_before_you">%d riders before you</string>
+    <string name="in_ride">You\'re in the ride</string>
+    <string name="driver">Driver</string>
+    <string name="ride_ended">Ride ended!</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="number_of_riders_before">number-of-riders-before</string>
+    <string name="shared_preferences_rides_string">shared-preferences-rides-string</string>
+    <string name="shared_preferences_widget_string_key">shared-preferences-widget-string-key</string>
+    <string name="widget_string_default">No information available</string>
+    <string name="left_ride_success">Left ride!</string>
+    <string name="map_content_description">Map showing the location of the driver and the origin</string>
+    <string name="home">Home</string>
+    <string name="sign_in_register">Sign in / Register</string>
+    <string name="driver_dashboard">Driver Dashboard</string>
+    <string name="ride_code_label">Ride Code</string>
+    <string name="rider_dashboard">Rider Dashboard</string>
+</resources>

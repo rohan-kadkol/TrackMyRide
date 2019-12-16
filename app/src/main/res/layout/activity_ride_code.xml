@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RideCodeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:title="@string/ride_code_label"
+            app:titleTextAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_label_ride_code"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:nextFocusDown="@id/et_ride_code"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".3"
+        android:layout_marginStart="@dimen/main_margin"
+        android:layout_marginEnd="@dimen/main_margin"
+        tools:text="@string/prompt_ride_code_driver" />
+
+    <EditText
+        android:id="@+id/et_ride_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:nextFocusUp="@id/tv_label_ride_code"
+        android:nextFocusDown="@id/btn_create_subscribe_ride"
+        app:layout_constraintLeft_toLeftOf="@id/tv_label_ride_code"
+        app:layout_constraintRight_toRightOf="@id/tv_label_ride_code"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_ride_code"
+        android:layout_marginStart="@dimen/main_margin"
+        android:layout_marginEnd="@dimen/main_margin"/>
+
+    <Button
+        android:id="@+id/btn_create_subscribe_ride"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin"
+        android:nextFocusUp="@id/et_ride_code"
+        app:layout_constraintLeft_toLeftOf="@id/et_ride_code"
+        app:layout_constraintRight_toRightOf="@id/et_ride_code"
+        app:layout_constraintTop_toBottomOf="@id/et_ride_code"
+        tools:text="@string/create_ride" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

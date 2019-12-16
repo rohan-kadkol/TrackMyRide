@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SubscribeRideActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:title="@string/subscribe_to_ride"
+            app:titleTextAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/main_margin">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:nextFocusDown="@id/et_name"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/tv_origin"
+            android:nextFocusUp="@id/tv_name"/>
+
+        <TextView
+            android:id="@+id/tv_origin"
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            android:text="@string/origin"
+            android:nextFocusDown="@id/tv_origin_address"
+            android:nextFocusUp="@id/et_name"/>
+
+        <TextView
+            android:id="@+id/tv_origin_address"
+            style="@style/Body"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sub_margin"
+            tools:text="1124 West Dr."
+            android:nextFocusDown="@id/btn_origin_pick"
+            android:nextFocusUp="@id/tv_origin"/>
+
+        <Button
+            android:id="@+id/btn_origin_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick"
+            android:nextFocusDown="@id/tv_destination"
+            android:nextFocusUp="@id/tv_origin_address"/>
+
+        <TextView
+            android:id="@+id/tv_destination"
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            android:text="@string/destination"
+            android:nextFocusUp="@id/btn_origin_pick"
+            android:nextFocusDown="@id/tv_destination_address"/>
+
+        <TextView
+            android:id="@+id/tv_destination_address"
+            style="@style/Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sub_margin"
+            tools:text="1022 Lee Dr."
+            android:visibility="gone"
+            android:nextFocusUp="@id/tv_destination"
+            android:nextFocusDown="@id/btn_destination_pick"/>
+
+        <Button
+            android:id="@+id/btn_destination_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick"
+            android:nextFocusUp="@id/tv_destination_address"
+            android:nextFocusDown="@id/btn_subscribe_ride" />
+
+        <Button
+            android:id="@+id/btn_subscribe_ride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_margin"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/subscribe_to_ride"
+            android:nextFocusUp="@id/btn_destination_pick"/>
+
+    </LinearLayout>
+
+</LinearLayout>

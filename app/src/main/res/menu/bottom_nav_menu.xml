@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_broadcast_location"
+        android:icon="@drawable/ic_person_pin_black_24dp"
+        android:title="@string/title_send_location" />
+
+    <item
+        android:id="@+id/navigation_track_location"
+        android:icon="@drawable/ic_map_black_24dp"
+        android:title="@string/title_track_location" />
+
+</menu>

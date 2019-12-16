@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DriverActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:title="@string/driver_dashboard"
+            app:titleTextAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_ride_id"
+        style="@style/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Ride id: 947"
+        android:nextFocusDown="@id/tv_ride_instructions"
+        android:paddingTop="@dimen/sub_margin"
+        android:paddingStart="@dimen/main_margin"
+        android:paddingEnd="@dimen/main_margin"/>
+
+    <TextView
+        android:id="@+id/tv_ride_instructions"
+        style="@style/Subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rider_id_instructions"
+        app:layout_constraintLeft_toLeftOf="@id/tv_ride_id"
+        app:layout_constraintRight_toRightOf="@id/tv_ride_id"
+        app:layout_constraintTop_toBottomOf="@id/tv_ride_id"
+        android:nextFocusDown="@id/rv_riders"
+        android:nextFocusUp="@id/tv_ride_id"
+        android:paddingStart="@dimen/main_margin"
+        android:paddingEnd="@dimen/main_margin"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/divider"
+        android:layout_marginBottom="@dimen/sub_margin"
+        android:layout_marginTop="@dimen/sub_margin"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_riders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="@dimen/main_margin"
+        android:paddingEnd="@dimen/main_margin"/>
+
+</LinearLayout>
