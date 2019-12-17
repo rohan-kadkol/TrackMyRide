@@ -34,7 +34,7 @@
         <activity android:name=".DriverActivity" />
         <activity android:name=".HomeActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".LoginActivity1"
             android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
