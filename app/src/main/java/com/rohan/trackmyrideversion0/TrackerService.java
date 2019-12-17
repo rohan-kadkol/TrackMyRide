@@ -1,6 +1,8 @@
 package com.rohan.trackmyrideversion0;
 
 import android.Manifest;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -9,6 +11,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -31,6 +34,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class TrackerService extends Service {
     private static final String TAG = TrackerService.class.getSimpleName();
     private static final String TRACKING_NOTIFICATION_CHANNEL_ID = "tracking-notification-channel";
+    private static final String NOTIFICATION_CHANNEL_ID = "driver-notification";
 
     public static final String STOP_SERVICE_ACTION = "stop-service";
 
@@ -81,6 +85,15 @@ public class TrackerService extends Service {
                 .setContentIntent(broadcastIntent)
                 .setSmallIcon(R.mipmap.ic_launcher_0)
                 .setPriority(NotificationCompat.PRIORITY_MIN);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(
+                    NOTIFICATION_CHANNEL_ID, getString(R.string.driver), NotificationManager.IMPORTANCE_MIN);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+            builder.setChannelId(NOTIFICATION_CHANNEL_ID);
+        }
+
         startForeground(1, builder.build());
     }
 
