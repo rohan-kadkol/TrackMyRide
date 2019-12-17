@@ -23,10 +23,16 @@ android {
         multiDexEnabled true
     }
     buildTypes {
+        debug {
+            buildConfigField('String', "GOOGLE_API_KEY", TRACK_MY_RIDE_GOOGLE_API_KEY)
+            resValue('string', "GOOGLE_API_KEY", TRACK_MY_RIDE_GOOGLE_API_KEY)
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.defaultConfig
+            buildConfigField('String', "GOOGLE_API_KEY", TRACK_MY_RIDE_GOOGLE_API_KEY)
+            resValue('string', "GOOGLE_API_KEY", TRACK_MY_RIDE_GOOGLE_API_KEY)
         }
     }
     compileOptions {

@@ -80,8 +80,8 @@ public class SubscribeRideActivity extends AppCompatActivity {
 
     private void showPlacePicker(int requestCode) {
         PingPlacePicker.IntentBuilder builder = new PingPlacePicker.IntentBuilder();
-        builder.setAndroidApiKey("AIzaSyDbdBncovqBM56gi5kDWEFHhLSfFB6RZzU")
-                .setMapsApiKey("AIzaSyDbdBncovqBM56gi5kDWEFHhLSfFB6RZzU");
+        builder.setAndroidApiKey(BuildConfig.GOOGLE_API_KEY)
+                .setMapsApiKey(BuildConfig.GOOGLE_API_KEY);
 
         // If you want to set a initial location rather then the current device location.
         // NOTE: enable_nearby_search MUST be true.
